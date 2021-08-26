@@ -32,7 +32,6 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     setName({
       name: "",
     });
