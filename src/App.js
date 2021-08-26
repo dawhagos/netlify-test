@@ -31,9 +31,28 @@ function App() {
     );
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setName({
+      name: "",
+    });
+    setAge({
+      age: "",
+    });
+    setCountry({
+      country: "",
+    });
+    setPosition({
+      position: "",
+    });
+    setWage({
+      wage: "",
+    });
+  };
+
   return (
     <div className="App">
-      <div className="information">
+      <div onSubmit={handleSubmit} className="information">
         <h2>HR: Employees Menu</h2>
         <label>Name:</label>
         <input
@@ -70,7 +89,9 @@ function App() {
             setWage(event.target.value);
           }}
         />
-        <button onClick={addEmployee}>Add Employee</button>
+        <button onClick={addEmployee} type="submit">
+          Add Employee
+        </button>
         <div className="employees">
           <button onClick={getEmployees}>Show Employees</button>
           {employeeList.map((val, key) => {
