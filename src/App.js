@@ -143,7 +143,7 @@ function App() {
                   }}
                 >
                   {" "}
-                  Update
+                  Update Wage
                 </button>
 
                 <button
@@ -151,7 +151,7 @@ function App() {
                     deleteEmployee(val.id);
                   }}
                 >
-                  Delete
+                  Delete Employee
                 </button>
               </div>
             </div>
